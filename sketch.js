@@ -13,9 +13,9 @@ function draw() {
   image(bgImage, 0, 0, width, height);
   let cols = 100; 
   let rows = 8; 
-  let padding = 70; 
+  let padding = 70;
   let startX = 30; 
-  let startY = 70; 
+  let startY = 75; 
 
   for (let i = 1; i < cols; i++) {
     for (let j = 1; j < rows; j++) {
@@ -29,17 +29,17 @@ function draw() {
 function drawGlyph(x, y) {
   push();
   translate(x, y);
-  let glyphSize = random(50, 50);
+  let glyphSize = 25;
 
-  strokeWeight(random(2, 4));
+  strokeWeight(random(1.5, 2.5));
   stroke(0);
   fill(0, 0, 0, 100);
   
   noFill();
   beginShape();
-  for (let i = 0; i < random(6, 9); i++) {
-    let vx = random(-glyphSize / 2, glyphSize / 2);
-    let vy = random(-glyphSize / 2, glyphSize / 2);
+  for (let i = 0; i < random(6, 10); i++) {
+    let vx = random(-glyphSize / 1, glyphSize / 1);
+    let vy = random(-glyphSize / 1, glyphSize / 1);
     curveVertex(vx, vy);
   }
   endShape();
